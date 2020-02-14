@@ -22,7 +22,10 @@ class UsuarioController extends Controller
     public function register(RegisterUsuarioRequest $request)
     {
         $Usuario = new Usuario();
-            $Usuario->name = $request->name;
+            $Usuario->primer_nombre = $request->primer_nombre;
+            $Usuario->segundo_nombre = $request->segundo_nombre;
+            $Usuario->primer_apellido = $request->primer_apellido;
+            $Usuario->segundo_apellido = $request->segundo_apellido;
             $Usuario->email = $request->email;
             $Usuario->password = bcrypt($request->password);
         $Usuario->save();
@@ -45,7 +48,7 @@ class UsuarioController extends Controller
         if (!$jwt_token = JWTAuth::attempt($input)) {
             return response()->json([
                 'success' => false,
-                'message' => 'Invalid Email or Password',
+                'message' => 'Correo Invalido o Contraseña',
             ], 401);
         }
  
@@ -66,12 +69,12 @@ class UsuarioController extends Controller
  
             return response()->json([
                 'success' => true,
-                'message' => 'Usuario logged out successfully'
+                'message' => 'Usuario ha cerrado sesión correctamente'
             ]);
         } catch (JWTException $exception) {
             return response()->json([
                 'success' => false,
-                'message' => 'Sorry, the Usuario cannot be logged out'
+                'message' => 'Lo siento, el usuario no ha podido cerrar sesión the Usuario cannot be logged out'
             ], 500);
         }
     }

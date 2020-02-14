@@ -27,7 +27,7 @@ class Usuario extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'primer_nombre', 'segundo_nombre', 'primer_apellido', 'segundo_apellido', 'email', 'password',
     ];
 
     /**
@@ -68,5 +68,15 @@ class Usuario extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    /***RELACIONES**/
+
+    /**
+     * Obtiene las empresas del usuario.
+     */
+    public function empresas()
+    {
+        $this->hasMany('App\Modules\Empresas\Models\Empresa', 'usuario_id', 'id');
     }
 }

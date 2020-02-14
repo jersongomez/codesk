@@ -11,9 +11,9 @@
 |
 */
 
-/*Route::get('/{any}', function () {
+Route::get('/{any}', function () {
     return response()->json([
         'success' => false,
         'message' => 'Ruta invalida o el token no es valido',
     ], 401);
-})->where('any', '.*');*/
+})->where('any', '.*');

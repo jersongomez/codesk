@@ -18,7 +18,10 @@ class UsuariosTableSeeder extends Seeder
     public function run()
     {
         $Usuario = new Usuario;
-	        $Usuario->name = 'admin';
+	        $Usuario->primer_nombre = 'admin';
+            $Usuario->segundo_nombre = 'admin';
+            $Usuario->primer_apellido = 'admin';
+            $Usuario->segundo_apellido = 'admin';
 	        $Usuario->email = 'admin@admin.com';
 	        $Usuario->password = Hash::make('123456789');
         $Usuario->save();

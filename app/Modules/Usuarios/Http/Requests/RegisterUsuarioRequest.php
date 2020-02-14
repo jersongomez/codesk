@@ -24,7 +24,10 @@ class RegisterUsuarioRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string',
+            'primer_nombre' => 'required|string',
+            'segundo_nombre' => 'string',
+            'primer_apellido' => 'required|string',
+            'segundo_apellido' => 'required|string',
             'email' => 'required|email|unique:usuarios',
             'password' => 'required|string|min:6|max:10'
         ];
