@@ -23,13 +23,28 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "name",
-									"value": "prueba",
+									"key": "primer_nombre",
+									"value": "jhon",
+									"type": "text"
+								},
+								{
+									"key": "segundo_nombre",
+									"value": "anderson",
+									"type": "text"
+								},
+								{
+									"key": "primer_apellido",
+									"value": "mendoza",
+									"type": "text"
+								},
+								{
+									"key": "segundo_apellido",
+									"value": "aguiar",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "admin5@admin5.com",
+									"value": "admin5@admin6.com",
 									"type": "text"
 								},
 								{
@@ -177,6 +192,218 @@
 									"key": "token",
 									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC91c3Vhcmlvc1wvbG9naW4iLCJpYXQiOjE1ODE1NjQ1NTQsImV4cCI6MTU4MTU2ODE1NCwibmJmIjoxNTgxNTY0NTU0LCJqdGkiOiJsUFJNbm0zS0RpRzFHSm5xIiwic3ViIjoxLCJwcnYiOiJiOTc5ZTc1OTg5OGJmMjdlYTNlOGIwMWQyMjQ0Mzc5MDA0MDg2MDFmIn0.eB8zUA9_olSs5SGhnN0tGJvgNHsMia0hNnKNnvKTQno"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "empresas",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/api/empresas/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC91c3Vhcmlvc1wvbG9naW4iLCJpYXQiOjE1ODE5ODUxMDYsImV4cCI6MTU4MTk4ODcwNiwibmJmIjoxNTgxOTg1MTA2LCJqdGkiOiJwaE1aRHcwOWNRRHdrSUZWIiwic3ViIjoxLCJwcnYiOiJiOTc5ZTc1OTg5OGJmMjdlYTNlOGIwMWQyMjQ0Mzc5MDA0MDg2MDFmIn0.3WgSkcWQG4fiv40irjhjQStPA0P0iTSLu1RF_KZlJ7w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/empresas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"empresas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/empresas/usuario/2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC91c3Vhcmlvc1wvbG9naW4iLCJpYXQiOjE1ODE5ODUxMDYsImV4cCI6MTU4MTk4ODcwNiwibmJmIjoxNTgxOTg1MTA2LCJqdGkiOiJwaE1aRHcwOWNRRHdrSUZWIiwic3ViIjoxLCJwcnYiOiJiOTc5ZTc1OTg5OGJmMjdlYTNlOGIwMWQyMjQ0Mzc5MDA0MDg2MDFmIn0.3WgSkcWQG4fiv40irjhjQStPA0P0iTSLu1RF_KZlJ7w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/empresas/usuario/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"empresas",
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/empresas/ver/12",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC91c3Vhcmlvc1wvbG9naW4iLCJpYXQiOjE1ODE5ODUxMDYsImV4cCI6MTU4MTk4ODcwNiwibmJmIjoxNTgxOTg1MTA2LCJqdGkiOiJwaE1aRHcwOWNRRHdrSUZWIiwic3ViIjoxLCJwcnYiOiJiOTc5ZTc1OTg5OGJmMjdlYTNlOGIwMWQyMjQ0Mzc5MDA0MDg2MDFmIn0.3WgSkcWQG4fiv40irjhjQStPA0P0iTSLu1RF_KZlJ7w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Nueva empresa",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Descripcion Nueva",
+									"type": "text"
+								},
+								{
+									"key": "sede",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "activa",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/empresas/guardar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"empresas",
+								"guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/empresas/ver/12",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC91c3Vhcmlvc1wvbG9naW4iLCJpYXQiOjE1ODE5ODUxMDYsImV4cCI6MTU4MTk4ODcwNiwibmJmIjoxNTgxOTg1MTA2LCJqdGkiOiJwaE1aRHcwOWNRRHdrSUZWIiwic3ViIjoxLCJwcnYiOiJiOTc5ZTc1OTg5OGJmMjdlYTNlOGIwMWQyMjQ0Mzc5MDA0MDg2MDFmIn0.3WgSkcWQG4fiv40irjhjQStPA0P0iTSLu1RF_KZlJ7w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/empresas/ver/12",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"empresas",
+								"ver",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/api/empresas/eliminar/5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC91c3Vhcmlvc1wvbG9naW4iLCJpYXQiOjE1ODE5ODUxMDYsImV4cCI6MTU4MTk4ODcwNiwibmJmIjoxNTgxOTg1MTA2LCJqdGkiOiJwaE1aRHcwOWNRRHdrSUZWIiwic3ViIjoxLCJwcnYiOiJiOTc5ZTc1OTg5OGJmMjdlYTNlOGIwMWQyMjQ0Mzc5MDA0MDg2MDFmIn0.3WgSkcWQG4fiv40irjhjQStPA0P0iTSLu1RF_KZlJ7w"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/empresas/eliminar/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"empresas",
+								"eliminar",
+								"5"
 							]
 						}
 					},
