@@ -135,7 +135,7 @@ class EmpresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(EmpresaRequest $request, $id)
+    public function actualizar(EmpresaRequest $request, $id)
     {
         $Empresa = Empresa::find($id);
             $Empresa->usuario_id = $this->Usuario->id;

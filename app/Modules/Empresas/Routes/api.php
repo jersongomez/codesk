@@ -1,7 +1,6 @@
 <?php
 
-
-use App\Modules\Empresas\Models\Empresa;
+//use App\Modules\Empresas\Models\Servicio;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,14 +28,38 @@ Route::group(['prefix' => 'empresas', 'middleware' => ['auth.jwt']], function() 
     Route::post('/guardar', 'EmpresaController@guardar');
 
     //Se muestra una empresa en especifico
-    Route::post('/ver/{id}', 'EmpresaController@ver')->where(['id' => '[0-9]+']);
+    Route::post('/ver/{id}', 'EmpresaController@ver')
+    	->where(['id' => '[0-9]+']);
 
     //Se actualiza una empresa
-    Route::post('/update/{id}', 'EmpresaController@update')
+    Route::post('/actualizar/{id}', 'EmpresaController@actualizar')
     	->where(['id' => '[0-9]+']);
 
     //se elimina una empres
     Route::post('/eliminar/{id}', 'EmpresaController@eliminar')
+    	->where(['id' => '[0-9]+']);
+});
+
+
+//Rutas que requieren proteccion
+Route::group(['prefix' => 'empresas/servicios', 'middleware' => ['auth.jwt']], function() {
+    
+	//Se muestran todos los servicios de todas las empresas
+    Route::post('/', 'ServicioController@index');
+
+    //Se guard
+    Route::post('/guardar','ServicioController@guardar');
+
+    //Se muestra una empresa en especifico
+    Route::post('/ver/{id}', 'ServicioController@ver')
+    	->where(['id' => '[0-9]+']);
+
+    //Se actualiza una empresa
+    Route::post('/actualizar/{id}', 'ServicioController@actualizar')
+    	->where(['id' => '[0-9]+']);
+
+    //se elimina una empres
+    Route::post('/eliminar/{id}', 'ServicioController@eliminar')
     	->where(['id' => '[0-9]+']);
 });
 

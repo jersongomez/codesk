@@ -15,12 +15,10 @@ class EmpresasTableSeeder extends Seeder
      */
     public function run()
     {
-        
-
         for($i=0; $i<=10; $i++){
         	$Empresa = new Empresa();
 	        	$Empresa->usuario_id = '1';
-				$Empresa->nombre = 'nombre '.$i;
+				$Empresa->nombre = 'Empresa '.$i;
 				$Empresa->descripcion = 'descripcion '.$i;
 				$Empresa->sede = false;
 				$Empresa->activa = true;

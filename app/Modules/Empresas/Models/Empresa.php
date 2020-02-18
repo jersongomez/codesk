@@ -25,8 +25,16 @@ class Empresa extends Model
     /**
 	 *  Obtengo el usuario al cual pertenece la empresa
 	 */
-	public function post()
+	public function usuario()
 	{
 	    return $this->belongsTo('App\Modules\Usuarios\Models\Usuario', 'usuario_id', 'id');
 	}
+
+    /**
+     * Obtengo los servicios de la empresa
+     */
+    public function servicios()
+    {
+        $this->hasMany('App\Modules\Empresas\Models\Servicio', 'empresa_id', 'id');
+    }
 }
